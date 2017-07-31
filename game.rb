@@ -18,11 +18,13 @@ class Game
 end
 
   def next_turn
-    puts "--- NEXT TURN ---"
-    if self.turn == 1
-      self.turn = 2
-    elsif self.turn == 2
-      self.turn = 1
+    if ongoing?
+      puts "--- NEXT TURN ---"
+      if self.turn == 1
+        self.turn = 2
+      elsif self.turn == 2
+        self.turn = 1
+    end
   end
 end
 
