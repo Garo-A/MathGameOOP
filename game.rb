@@ -40,9 +40,9 @@ end
 
   def get_winner
     if self.player_1.lives == 0
-      puts "The winner is Player 2!"
+      puts "The winner is Player 2 with #{player_2.lives}/3 lives!"
     else
-      puts "The winner is Player 1!"
+      puts "The winner is Player with #{player_1.lives}/3! lives"
     end
   end
 
@@ -62,7 +62,7 @@ end
   def game_start
     while (ongoing?)
       print_question
-      print ">"
+      print "#{current_player.name} >"
       current_answer = gets.chomp.to_i
       answer_evaluation(current_answer)
     end
