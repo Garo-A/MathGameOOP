@@ -70,5 +70,6 @@ end
     end
     game_over
     get_winner
+    puts "Goodbye!"
   end
 end
